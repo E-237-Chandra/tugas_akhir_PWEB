@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IPB BOGOR</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<style>
+		body {
+    	margin: 0;
+		}
+
+		.head{
+			margin-top: 0;
+		float: top;  
+		}
+
+		.dropbtn {
+			background-color: #ffffff;
+			color: rgb(2, 2, 2);
+			font-size: 13px;
+			border: none;
+			width: auto;
+			height: 30px;
+			cursor: pointer;
+		}
+		
+		.dropdown {
+			position: relative;
+			display: inline-block;
+			left: 200px;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+		
+		.dropdown-content a {
+			color: rgb(0, 0, 0);
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		
+		.dropdown-content a:hover {background-color: #f1f1f1}
+		
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+		
+		.dropdown:hover .dropbtn {
+			color: #ffffff;
+			background-color: #0f0986;
+		}
+
+		.dropdown2 {
+			position: relative;
+			display: inline-block;
+			left: 300px;
+		}
+		
+		.dropdown2-content {
+			display: none;
+			position: absolute;
+			background-color: #0a00c7;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		.dropdown2-content a {
+			color: rgb(0, 0, 0);
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		
+		.dropdown2-content a:hover {background-color: #0f0986}
+		
+		.dropdown2:hover .dropdown-content {
+			display: block;
+		}
+		
+		.dropdown2:hover .dropbtn {
+			color: #ffffff;
+			background-color: #0f0986;
+		}
+
+		.kedua{
+		overflow: hidden;
+		background-color: #08026a;
+		height: 20vh;
+		}
+
+		.list{
+		background-color: #08026a;
+		border-top: solid #f9f9f937;
+		position: relative;
+		height: 50px;
+		}
+
+		.dropbtn3 {
+		background-color: #08026a;
+		color: rgb(255, 255, 255);
+		margin-top: 9px;
+		font-size: 16px;
+		border: none;
+		width: 200px;
+		height: 30px;
+		cursor: pointer;
+		}
+
+		.dropdown3 {
+		position: relative;
+		display: inline-block;
+		left: 160px;
+		}
+
+		.dropdown3-content {
+		display: none;
+		position: absolute;
+		background-color: #000000;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		}
+
+		.dropdown3-content a {
+		color: rgb(0, 0, 0);
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		}
+
+		.dropdown3-content a:hover {background-color: #f1f1f1}
+
+		.dropdown3:hover .dropdown-content {
+		display: block;
+		}
+
+		.dropdown3:hover .dropbtn3 {
+		color: #0b00df;
+		background-color: #08026a;
+		}
+
+		.new{
+		background-color: #08026a;
+		color: #ffff;
+		height: 50px;
+		font-size: 35px;
+		left: 50px;
+		display: block;
+		}
+
+		.berita{
+		position: relative;
+		overflow: hidden;
+		padding-left: 100px;
+		}
+
+		.footer{
+		float: bottom;
+		overflow: auto;
+		top: 10vh;
+		background-color: #08026a;
+		height: 10vh;
+		width: 100%;
+		}
+
+		/*slider*/
+		#slider {
+		position: relative;
+		width: auto;
+		height: 550px;
+		overflow: hidden;
+		}
+		#slider ul {
+		position: relative;
+		list-style: none;
+		height: 100%;
+		width: 1000%;
+		padding: 0;
+		margin: 0;
+		transition: all 750ms ease;
+		left: 0;
+		}
+		#slider ul li {
+		position: relative;
+		height: 100%;
+		float: left;
+		}
+		#slider ul li img{
+		width: 1518px;
+		height: 550px;
+		}
+		
+		#slider #prev, #slider #next {
+		width: 50px;
+		line-height: 50px;
+		border-radius: 50%;
+		font-size: 2rem;
+		text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+		text-align: center;
+		color: white;
+		text-decoration: none;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all 200ms ease;
+		}
+		#slider #prev:hover, #slider #next:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+		text-shadow: 0;
+		}
+		#slider #prev {
+		left: 10px;
+		}
+		#slider #next {
+		right: 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="head">
+  <div class="dropdown">
+    <button class="dropbtn">Language</button>
+    <div class="dropdown-content">
+    <a href="#">English</a>
+    <a href="#">Indonesia</a>
+    </div>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">About IPB</button>
+    <div class="dropdown-content">
+	  <a href="#">IPB University Rebranding</a>
+      <a href="#">IPB University at a Glance</a>
+	  <a href="#">IPB University Brand Attribute</a>
+      <a href="#">IPB Executive</a>
+	  <a href="#">IPB University Experts</a>
+      <a href="#">IPB Successful Staff</a>
+	  <a href="#">Rector Insight</a>
+      <a href="#">Organizational Structure</a>
+	  <a href="#">Board of trustees</a>
+      <a href="#">Academic Senate</a>
+      </div>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">Admision</button>
+    <div class="dropdown-content">
+      <a href="#">Academic Affairs</a>
+      <a href="#">Service and Promotion</a>
+      <a href="#">Faculty and Departement Website Link</a>
+	</div>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">Study Program</button>
+    <div class="dropdown-content">
+      <a href="#">Undergraduate</a>
+      <a href="#">Graduate</a>
+	  <a href="#">Vocational</a>
+      </div>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">Facilities</button>
+    <div class="dropdown-content">
+      <a href="#">Semua ada</a>
+      <a href="#">Termasuk Tol</a>
+      </div>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">Campus Life</button>
+    <div class="dropdown-content">
+      <a href="#">Art</a>
+      <a href="#">Sport</a>
+	  <a href="#">Student Community</a>
+      </div>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">Current Student</button>
+    <div class="dropdown-content">
+      <a href="#">Course Schedule</a>
+      <a href="#">Academic Timeline</a>
+      </div>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">Achievements</button>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">Campus Tour</button>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">Contact Us</button>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">PPID</button>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn">MBKM</button>
+  </div>
+  <div class="dropdown2">
+    <button class="dropbtn"><i class="fa fa-search"></i></button>
+  </div>
+  </div>
+  <div class="kedua">
+    <p align="center"><img src="https://ipb.ac.id//assets/assert/logo/Logo_IPB_University_Horizontal.png" width="400px" height="110px"></p>
+  </div>
+  <div class="list">
+  <div class="dropdown3">
+    <button class="dropbtn3">Future Students</button>
+    <div class="dropdown-content">
+      <a href="#">English</a>
+      <a href="#">Indonesia</a>
+    </div>
+  </div>
+  <div class="dropdown3">
+    <button class="dropbtn3">Parents</button>
+    <div class="dropdown-content">
+      <a href="#">English</a>
+      <a href="#">Indonesia</a>
+    </div>
+  </div>
+  <div class="dropdown3">
+    <button class="dropbtn3">Counsellors</button>
+    <div class="dropdown-content">
+      <a href="#">English</a>
+      <a href="#">Indonesia</a>
+    </div>
+  </div>
+  <div class="dropdown3">
+    <button class="dropbtn3">Partners</button>
+    <div class="dropdown-content">
+      <a href="#">English</a>
+      <a href="#">Indonesia</a>
+    </div>
+  </div>
+  <div class="dropdown3">
+    <button class="dropbtn3">Researcher</button>
+    <div class="dropdown-content">
+      <a href="#">English</a>
+      <a href="#">Indonesia</a>
+    </div>
+  </div>
+  <div class="dropdown3">
+    <button class="dropbtn3">Alumni</button>
+    <div class="dropdown-content">
+      <a href="#">English</a>
+      <a href="#">Indonesia</a>
+    </div>
+  </div>
+  </div>
+  <div id="slider">
+    <ul id="slideWrap"> 
+      <li><img src="https://ipb.ac.id/media/images/banner/helm-serat-tandan-kosong-kelapa-sawit-tahan-benturan-banner.jpeg" alt=""></li>
+      <li><img src="https://ipb.ac.id/media/images/banner/cabe-pelangi-banner5.jpg" alt=""></li>
+      <li><img src="https://ipb.ac.id/media/images/banner/yogurt-probiotik-rosela-banner.jpeg" alt=""></li>
+      <li><img src="https://ipb.ac.id/media/images/banner/trekfish-piranti-penelusur-jejak-penangkapan-ikan-banner.jpg" alt=""></li>
+    </ul>
+    <a id="prev" href="#">&#8810;</a>
+    <a id="next" href="#">&#8811;</a>
+  </div>
+  <div style="margin-top: 40px;">
+    <p align="center" style="font-size: 30px;"><img src="https://ipb.ac.id/assets/assert/logo/inspiring_inovation.png"><br>
+    in Agriculture, Ocean and Biosciences for a Sustainable World</p>
+  </div>
+  <div class="new">
+  <table border="0" width="100%">
+    <tr>
+      <td width="150px"></td>
+      <td>News</td>
+    </tr>
+  </table>
+  </div>
+  <table border="0" width="100%" height="3vh">
+      <tr>
+      <td width="300px" align="right"><a href="Berita1.html"><img src="https://akcdn.detik.net.id/community/media/visual/2018/07/11/cc01493c-6a04-4bea-b33d-3be0086c9f09.jpeg?w=700&q=90" width="300" height="200"></a></td>
+      <td width="300px" align="center"><a href="berita2.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Bogor_Agricultural_University_%28IPB%29_symbol.svg/2048px-Bogor_Agricultural_University_%28IPB%29_symbol.svg.png" width="220" height="200"></a></td>
+      <td width="300px"><a href="berita3.html"><img src="https://akcdn.detik.net.id/community/media/visual/2018/01/17/4c003a60-7b3f-452b-a719-9d84fb489e79.jpeg?w=700&q=90" width="350" height="200"></a></td>
+      </tr>
+  </table>
+  <table border="0" width="100%" height="3vh">
+    <tr>
+    <td width="90px"></td>
+    <td width="198px" align="left"><a href="Berita1.html">Pakar IPB Ungkap Tanaman yang Bisa Hasilkan Emas di Indonesia</a></td>
+    <td width="280px" align="center"><a href="berita2.html">IPB Bakal Buka Fakultas Kedokteran, ini istimewanya</a></td>
+    <td width="341px"><a href="berita3.html">IPB University Buka Lowongan Dosen Tetap Non PNS <br>Pendidikan Kedokteran</a></td>
+    </tr>
+</table>
+<table border="0" height="90px"></table>
+	<br/>
+	<a href="logout.php">LOGOUT</a>
+</body>
+<!-- Slider Chan -->
+<script>
+	  var responsiveSlider = function() {
+    var slider = document.getElementById("slider");
+    var sliderWidth = slider.offsetWidth;
+    var slideList = document.getElementById("slideWrap");
+    var count = 1;
+    var items = slideList.querySelectorAll("li").length;
+    var prev = document.getElementById("prev");
+    var next = document.getElementById("next");
+    
+    window.addEventListener('resize', function() {
+      sliderWidth = slider.offsetWidth;
+    });
+    
+    var prevSlide = function() {
+      if(count > 1) {
+        count = count - 2;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+      else if(count = 1) {
+        count = items - 1;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+    };
+    
+    var nextSlide = function() {
+      if(count < items) {
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+      else if(count = items) {
+        slideList.style.left = "0px";
+        count = 1;
+      }
+    };
+    
+    next.addEventListener("click", function() {
+      nextSlide();
+    });
+    
+    prev.addEventListener("click", function() {
+      prevSlide();
+    });
+    
+    setInterval(function() {
+      nextSlide()
+    }, 5000);
+    
+    };
+    
+    window.onload = function() {
+    responsiveSlider();  
+    }
+</script>
+</html>
